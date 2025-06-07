@@ -1,0 +1,314 @@
+/* ======================
+    ESTILOS GENERALES 
+   ====================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font: normal 1rem 'Segoe UI', sans-serif;
+  background-color: #f4f4f4;
+  transition: background-color 0.4s ease-in-out;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+/* ======================
+   BARRA DE NAVEGACIÓN 
+   (logo + menú de enlaces)
+   ====================== */
+nav {
+  background-color: #014034; /* Verde esmeralda oscuro */
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 20px;
+  color: white;
+}
+/*logo del cine*/
+.logo img {
+  height: 50px;
+  transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+  transform: scale(1.05);
+}
+/* Contenedor de enlaces del menú */
+.menu {
+  margin-left: auto; /* Empuja el menú a la derecha */
+}
+/* Estilos para enlaces*/
+.menu a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+  padding: 5px 15px;
+  transition: background-color 0.3s ease, border-bottom 0.3s ease;
+}
+.menu a:hover {
+    color: #F0D98C; 
+    text-shadow: 0 0 6px rgba(240, 217, 140, 0.5);
+}
+/* Enlace de la pagina actual*/
+.menu a.active {
+  border-bottom: 2px solid #efefef;
+}
+/* ======================
+    Seccion Proximos Extrenos
+   ====================== */
+  .estrenos {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  /*Titulo de la seccion*/
+  .estrenos h1 {
+    text-align: center;
+    margin-bottom: 2.5rem;
+    font-size: 3rem;
+    text-transform: uppercase;
+    color: #013220;
+    text-shadow: 2px 2px #fff6f5;
+  }
+  /* ======================
+   TARJETAS DE PELÍCULAS 
+   ====================== */
+    /* Estilo individual por película */
+  .pelicula {
+    display: flex;
+    background-color: #ffffff;
+    color: #000000;
+    margin-bottom: 2rem;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+   /*Efecto para las tarjetas*/
+  .pelicula:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  }
+
+    /* Ajuste para imágenes */
+  .pelicula img {
+    width: 200px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 16px 0 0 16px;
+  }
+    /* Contenedor de (titulo+fecha+sipnosis) */
+  .info {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  /* titulo de la peli */
+  .info h2 {
+    margin-bottom: 0.5rem;
+    font-size: 1.8rem;
+    color: #013220;
+  }
+   /* fecha de la peli */
+  .fecha {
+    font-style: italic;
+    color: #555;
+    margin: 0.5rem ;
+  }
+   /* sipnosis de la peli */
+  .sinopsis {
+    margin-top: 1rem;
+    line-height: 1.5;
+  }
+
+/* ======================
+   FOOTER
+====================== */
+footer {
+  background-color: #014034; /* Verde esmeralda oscuro */
+  color: #ffffff;
+  padding: 30px 20px;
+  text-align: center;
+  animation: fadeInUp 1s ease forwards;
+  transition: background-color 0.4s ease;
+}
+
+.footer-contenedor {
+  max-width: 1000px;
+  margin: auto;
+  text-align: center;
+}
+
+.footer-redes {
+  margin-top: 1rem;
+}
+
+.footer-redes a {
+  margin: 0 0.5rem;
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.footer-redes img {
+  width: 24px;
+  height: 24px;
+  filter: brightness(0) invert(1);
+  transition: transform 0.3s ease;
+}
+
+.footer-redes a:hover {
+  transform: scale(1.2);
+}
+
+.footer-links {
+  margin-top: 1rem;
+}
+
+.footer-links a {
+  color: white;
+  margin: 0 0.5rem;
+  text-decoration: none;
+  font-size: 0.9rem;
+  opacity: 0.8;
+  transition: opacity 0.3s, text-decoration 0.3s;
+}
+
+.footer-links a:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+/* RESPONSIVO GENERAL */
+  /* Para pantallas de hasta 1024px */
+@media (max-width: 1024px) {
+  nav {
+    padding: 15px; /* Reduce el padding de la barra de navegación */
+  }
+  .menu a {
+    margin: 0 8px; /* Ajusta los márgenes entre los enlaces del menú */
+    padding: 4px 12px; /* Reduce el padding de los enlaces */
+    font-size: 0.95rem; /* Ajusta ligeramente el tamaño de fuente */
+  }
+  .estrenos {
+    padding: 1.5rem; /* Reduce el padding general de la sección */
+  }
+  .estrenos h1 {
+    font-size: 2.5rem; /* Reduce el tamaño del título principal */
+    margin-bottom: 2rem;
+  }
+  .pelicula {
+    flex-direction: column; /* Apila la imagen y la información en vertical */
+    align-items: center; /* Centra los elementos apilados */
+    text-align: center; /* Centra el texto dentro de la tarjeta */
+  }
+  .pelicula img {
+    height: 300px;
+    width: 100%; /* La imagen ocupa todo el ancho */
+    border-radius: 16px 16px 0 0; /* Ajusta los bordes de la imagen */
+    object-fit: contain; /* Asegura que la imagen completa se vea sin recortar */
+  }
+  .info {
+    padding: 1.5rem; /* Ajusta el padding de la información */
+    align-items: center; /* Centra los elementos internos del info */
+  }
+  .info h2 {
+    font-size: 1.6rem; /* Reduce el tamaño del título de la película */
+    margin-bottom: 0.3rem; /* Ajusta el margen inferior */
+  }
+  .fecha {
+    font-size: 0.9rem; /* Reduce el tamaño de la fecha */
+    margin-bottom: 0.8rem;
+  }
+  .sinopsis {
+    font-size: 0.95rem; /* Ajusta el tamaño de la sinopsis */
+    text-align: center; /* Centra el texto de la sinopsis */
+  }
+}
+
+/* Para pantallas de hasta 600px (Smartphones) */
+@media (max-width: 600px) {
+
+  /* Navegación */
+  nav {
+    flex-direction: column; /* Apila el logo y el menú */
+    align-items: center; /* Centra los elementos apilados */
+    padding: 15px 10px; /* Ajusta el padding para móviles */
+  }
+
+  .logo {
+    margin-bottom: 10px; /* Espacio entre el logo y el menú */
+  }
+
+  .menu {
+    margin-left: 0; /* Quita el margen que empuja a la derecha */
+    width: 100%; /* El menú ocupa todo el ancho disponible */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; /* Distribuye los enlaces uniformemente */
+    gap: 5px; /* Espacio entre enlaces en el menú */
+  }
+
+  .menu a {
+    margin: 5px; /* Margen para los enlaces */
+    padding: 6px 10px; /* Ajusta el padding de los enlaces */
+    font-size: 0.85rem; /* Tamaño de fuente más pequeño para enlaces */
+  }
+
+  /* Sección Estrenos */
+  .estrenos {
+    padding: 1rem; /* Más padding para los costados */
+  }
+
+  .estrenos h1 {
+    font-size: 2rem; /* Reduce aún más el tamaño del título principal */
+    margin-bottom: 1.5rem;
+  }
+
+  /* Tarjetas de Películas */
+  .pelicula {
+    margin-bottom: 1.5rem; /* Reduce el margen inferior entre películas */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Sombra más ligera */
+  }
+
+  .pelicula img {
+    max-height: 500em; /* Limita la altura de la imagen en móviles */
+    object-fit: contain; /* Asegura que la imagen completa se vea sin recortar */
+    object-fit: cover;
+  }
+
+  .info {
+    padding: 1rem; /* Reduce el padding de la información */
+  }
+
+  .info h2 {
+    font-size: 1.5rem; /* Tamaño de título más pequeño para películas */
+  }
+
+  .fecha {
+    font-size: 0.85rem; /* Tamaño de fecha más pequeño */
+  }
+
+  .sinopsis {
+    font-size: 0.9rem; /* Tamaño de sinopsis más pequeño */
+    overflow: hidden; /* Oculta el contenido que se desborda */
+  }
+
+  /* Footer */
+  .footer-redes a img {
+    width: 25px; /* Ajusta el tamaño de los iconos de redes */
+    height: 25px;
+  }
+
+  .footer-links a {
+    display: block; /* Cada enlace del footer en su propia línea */
+    margin: 8px auto; /* Centra los enlaces con margen automático */
+    font-size: 0.8rem; /* Reduce el tamaño de fuente de los enlaces del footer */
+  }
+}
+
+  

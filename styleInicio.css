@@ -1,0 +1,508 @@
+/* ======================
+    ESTILOS GENERALES
+====================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+    font: normal 1rem 'Segoe UI', sans-serif;
+    background-color: #f4f4f4;
+    transition: background-color 0.4s ease-in-out;
+}
+
+/* ======================
+BARRA DE NAVEGACIÓN
+(logo + menú de enlaces)
+====================== */
+nav {
+  background-color: #014034; /* Verde esmeralda oscuro */
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 20px;
+  color: white;
+}
+
+/* Logo del cine */
+.logo img {
+    height: 50px; /* Altura fija para el logo */
+    transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+  transform: scale(1.05);
+}
+
+/* Contenedor de enlaces del menú */
+.menu {
+    margin-left: auto;
+}
+
+/* Estilos base para enlaces */
+.menu a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+  padding: 5px 15px;
+  transition: background-color 0.3s ease, border-bottom 0.3s ease;
+}
+
+.menu a:hover {
+    color: #F0D98C; 
+    text-shadow: 0 0 6px rgba(240, 217, 140, 0.5);
+}
+/* Enlace de la página actual */
+.menu a.active {
+    border-bottom: 2px solid #efefef;
+}
+
+
+/* ======================
+IMAGEN HERO
+====================== */
+.hero-image img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+
+
+/* ================================
+SECCIÓN: EXPERIENCIAS DE CINE
+================================ */
+.experiencias-cine {
+    display: flex;
+    padding: 40px 20px;
+    background-color: #F0D98C;
+    margin: 30px 0;
+}
+
+.tipo-experiencia {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.tipo-experiencia:hover {
+    transform: translateY(-5px);
+}
+
+.tipo-experiencia h2 {
+    color: #013220;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    position: relative;
+    display: inline-block;
+}
+
+.tipo-experiencia h2::after {
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 3px;
+    background-color: #013220;
+    bottom: -8px;
+    left: 25%;
+}
+
+.tipo-experiencia img {
+    width: 100%;
+    max-width: 400px;
+    min-height: 250px;
+    max-height: 250px;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    opacity: 0.75; 
+    zoom: 75%; 
+}
+
+.tipo-experiencia p {
+    color: #666;
+    line-height: 1.6;
+    font-size: 1.1rem;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.separador {
+    width: 2px;
+    background-color: #013220;
+    margin: 0 20px;
+}
+
+
+/* ================================
+SECCIÓN: PROMOCIONES Y COMBOS
+================================ */
+.estructura {
+    display: flex; 
+    gap: 30px; 
+    max-width: 1200px; 
+    margin: 20px auto; 
+    padding: 0 20px; 
+    box-sizing: border-box; 
+    flex-wrap: wrap; 
+    justify-content: center; 
+    align-items: flex-start;
+}
+
+.promociones {
+    flex: 3.5; 
+    min-width: 450px; 
+    background-color: rgb(255, 240, 212);
+    border-radius: 20px;
+    display: flex; 
+    flex-direction: column;
+    padding: 45px 25px;
+    margin: 0; 
+    box-sizing: border-box;
+    margin-bottom: 30px; 
+}
+
+.sectorC {
+    flex: 1; 
+    min-width: 280px; 
+    background-color: rgb(255, 240, 212);
+    border-radius: 20px;
+    display: flex; 
+    flex-direction: column;
+    padding: 45px 25px;
+    margin: 0; 
+    text-align: center;
+    align-items: center; 
+    box-sizing: border-box;
+    margin-bottom: 30px; 
+}
+
+
+.cuadroDeImagenes {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr;
+  margin: 40px;
+  max-width: 100%;
+}
+
+.division1 {
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+  grid-template-rows: 1fr;
+  gap: 0px;
+  background-color: #740d00b6;
+}
+
+.division2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px;
+  background-color: #740d00b6;
+}
+
+.pelis img{
+  min-width: 100%;
+  max-width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.peliculas {
+  max-height: 500px;
+  margin:20px;
+  width: auto;
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  overflow-x: auto;
+}
+
+
+.peliculas {
+    max-height: 500px;
+    margin: 20px 0; 
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    overflow-x: auto;
+    padding-bottom: 10px;
+    flex-grow: 1;
+}
+
+.pelicula {
+    background-color: #fafafa;
+    border-radius: 10px;
+    flex: 0 0 260px;
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+    gap: 8px;
+    min-width: 260px;
+    max-height: 100%;
+}
+
+.info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    white-space: nowrap;
+    padding: 0 15px 10px; 
+}
+
+.info a {
+    text-decoration: none;
+    color: #013220;
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.estrellas {
+    font-size: 18px;
+    color: gold;
+}
+
+.pelicula img {
+    min-width: 100%;
+    min-height: 120%; 
+    object-fit: cover;
+    border-radius: 10px 10px 0 0; 
+    display: block;
+}
+
+.combos {
+    max-height: 1100px;
+    width: 100%; 
+    padding: 20px;
+    background-color: #a3831a;
+    border-radius: 20px;
+    margin: 0; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow-y: auto;
+    text-align: center;
+    flex-grow: 1;
+}
+
+.tCombo {
+    text-align: center;
+}
+
+.list a {
+    font-size: 25px;
+    color: #ffe2c7;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+    padding: 5px 0;
+}
+
+h4 {
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #013220;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.combos img {
+    width: 60%;
+    height: auto;
+    border-radius: 20px;
+    transition: transform 0.3s ease;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.list:hover {
+    transform: scale(1.05); 
+}
+
+.pelis:hover {
+    transform: scale(1.05); 
+}
+
+/* ======================
+PIE DE PÁGINA
+====================== */
+footer {
+    background-color: #014034; /* Verde esmeralda oscuro */
+    color: #ffffff;
+    padding: 30px 20px;
+    text-align: center;
+    transition: background-color 0.4s ease;
+}
+
+.footer-contenedor {
+    max-width: 1000px;
+    margin: auto;
+    text-align: center;
+}
+
+.footer-redes {
+    margin-top: 1rem;
+}
+
+.footer-redes a {
+    margin: 0 0.5rem;
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.footer-redes img {
+    width: 24px;
+    height: 24px;
+    filter: brightness(0) invert(1);
+    transition: transform 0.3s ease;
+}
+
+.footer-redes a:hover {
+    transform: scale(1.2);
+}
+
+.footer-links {
+    margin-top: 1rem;
+}
+
+.footer-links a {
+    color: white;
+    margin: 0 0.5rem;
+    text-decoration: none;
+    font-size: 0.9rem;
+    opacity: 0.8;
+    transition: opacity 0.3s, text-decoration 0.3s;
+}
+
+.footer-links a:hover {
+    opacity: 1;
+    text-decoration: underline;
+}
+
+/* ======================
+RESPONSIVE GENERAL
+====================== */
+/*Para pantallas medianas*/
+@media (max-width: 1024px) {
+  nav, .nav-superior {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .menu {
+    margin-left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+
+  .hero-image img {
+    height: 300px;
+  }
+
+  .cuadroDeImagenes {
+    margin: 20px;
+  }
+
+  .division1, .division2 {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .peliculas {
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+  }
+
+  .pelicula {
+    min-width: 200px;
+  }
+
+  .combos img {
+    width: 80%;
+  }
+
+  .footer-contenedor {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+  }
+}
+
+/*Para pantallas pequeñas*/
+@media (max-width: 600px) {
+  nav, .nav-superior {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .menu a {
+    display: block;
+    margin: 5px 0;
+    padding: 10px 0;
+  }
+
+  .hero-image img {
+    height: 200px;
+  }
+
+  .experiencias-cine {
+    padding: 15px 10px;
+  }
+
+  .tipo-experiencia img {
+    max-width: 100%;
+    min-height: auto;
+    height: auto;
+  }
+
+  .cuadroDeImagenes {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    margin: 10px;
+  }
+
+  .division1, .division2 {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .peliculas {
+    gap: 10px;
+  }
+
+  .pelicula {
+    min-width: 180px;
+  }
+
+  .combos img {
+    width: 100%;
+  }
+
+  .list a {
+    font-size: 18px;
+  }
+
+  .footer-redes img {
+    width: 30px;
+    height: auto;
+  }
+
+  .footer-links a {
+    display: block;
+    margin: 5px 0;
+  }
+}
+
